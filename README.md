@@ -1,5 +1,12 @@
 # pyDISORT
-Python wrapper to the radiative transfer solver DISORT.
+
+Python wrapper to the DISORT¹ radiative transfer solver.
+
+(1) K. Stamnes, SC. Tsay, W. Wiscombe and K. Jayaweera, Numerically
+    stable algorithm for discrete-ordinate-method radiative
+    transfer in multiple scattering and emitting layered media,
+    Appl Opt 27 (1988) (12), pp. 2502–2509.
+    
 
     performs radiative transfer simulations by means of the DISORT RT solver
 
