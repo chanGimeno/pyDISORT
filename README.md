@@ -9,9 +9,9 @@ Python wrapper to the DISORT¹ radiative transfer solver.
     
 ## Installation
 
-go to the directory where you have checked out the pyDISORT project and run the following command:
+Go to the directory where you have checked out the pyDISORT project and run the following command:
 
-    python setup.py install
+    sudo python setup.py install
 
 ## Documentation
 
