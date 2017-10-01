@@ -8,15 +8,6 @@ from __version__ import __version__
 
 import _disort
 
-import numpy as np
-
-# generic class
-class O(object):
-    """
-    generic class
-    """
-    pass
-
 ##########################################################################################################
 #
 # functions
@@ -30,7 +21,7 @@ def run(dTau, w0=1., iphas=2, gg=0.85,
         onlyFl=False, accur=0., plank=False,
         temp=300., wvnmlo=999., wvnmhi=1000.,
         ibcnd=0, fisot=0., btemp=300., ttemp=300.,
-        temis=1., prnt=np.zeros(5,dtype=bool),):
+        temis=1., prnt=[False]*5,):
 
     """
 
@@ -191,6 +182,8 @@ def run(dTau, w0=1., iphas=2, gg=0.85,
     >>> import disort
     >>> D_dir, D_diff, U_up, dFdt, I = disort.run(dTau, ssalb, iphas='Rayleigh')
     """
+
+    import numpy as np
 
     if not hasattr(w0,'__iter__'):
         w0 = w0 * np.ones_like(dTau)
