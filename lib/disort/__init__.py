@@ -33,6 +33,7 @@ def run(dTau, w0=1., iphas=2, gg=0.85,
         temis=1., prnt=np.zeros(5,dtype=bool),):
 
     """
+
     performs radiative transfer simulations by means of the DISORT RT solver
 
     Parameters
@@ -154,8 +155,9 @@ def run(dTau, w0=1., iphas=2, gg=0.85,
         (Default: 0.)
     PRNT : array(dtype=bool)
         Array of LOGICAL print flags causing the following prints
+           ===      ===============================================
            L        quantities printed
-          --        ------------------
+           ===      ===============================================
            1        input variables (except PMOM)
            2        fluxes
            3        intensities at user levels and angles
@@ -164,6 +166,7 @@ def run(dTau, w0=1., iphas=2, gg=0.85,
            5        phase function moments PMOM for each layer
                     ( only if PRNT(1) = TRUE, and only for layers
                     with scattering )
+           ===      ===============================================
         (Default: array([False False False False False]))
 
     Returns
