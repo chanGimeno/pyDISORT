@@ -176,3 +176,17 @@ Go to the directory where you have checked out the pyDISORT project and run the 
 ## Examples
 
 See `test` directory.
+
+## TODO
+
+- The current implementation have the following parameters hardcoded:
+
+  - MXCLY  = 50   (Max no. of computational layers)
+  - MXULV  = 50   (Max no. of output levels)
+  - MXCMU  = 48   (Max no. of computation polar angles)
+  - MXUMU  = 10   (Max no. of output polar angles)
+  - MXPHI  = 3    (Max no. of output azimuthal angles)
+  - MXSQT  = 1000 (Max no. of square roots of integers (for LEPOLY))
+
+- These parameters are used as dimensions for array allocation. Allocation
+  should be done dynamically
