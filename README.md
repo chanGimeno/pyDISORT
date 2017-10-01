@@ -7,7 +7,17 @@ Python wrapper to the DISORT¹ radiative transfer solver.
     transfer in multiple scattering and emitting layered media,
     Appl Opt 27 (1988) (12), pp. 2502–2509.
     
+## Installation
 
+go to the directory where you have checked out the pyDISORT project and run the following command:
+
+    python setup.py install
+
+## Documentation
+
+    >>> import disort
+    >>> help(disort.run)
+    
     performs radiative transfer simulations by means of the DISORT RT solver
 
     Parameters
@@ -162,3 +172,7 @@ Python wrapper to the DISORT¹ radiative transfer solver.
     --------
     >>> import disort
     >>> D_dir, D_diff, U_up, dFdt, I = disort.run(dTau, ssalb, iphas='Rayleigh')
+    
+## Examples
+
+See `test` directory.
