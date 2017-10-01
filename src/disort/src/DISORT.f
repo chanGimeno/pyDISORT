@@ -380,6 +380,7 @@ c     ..
 c     .. Local Scalars ..
 
       LOGICAL   COMPAR, CORINT, DELTAM, LYRCUT, PASS1
+      LOGICAL   VERBOSE
       INTEGER   IQ, IU, J, KCONV, L, LC, LEV, LU, MAZIM, NAZ, NCOL,
      &          NCOS, NCUT, NN, NS
       REAL      ANGCOS, AZERR, AZTERM, BPLANK, COSPHI, DELM0, DITHER,
@@ -433,6 +434,7 @@ c     .. Intrinsic Functions ..
 c     ..
       SAVE      DITHER, PASS1, PI, RPD, SQT
       DATA      PASS1 / .TRUE. /, PRNTU0 / 2*.FALSE. /
+      DATA      VERBOSE / .FALSE. /
 
       DELTAM = .TRUE.
       CORINT = .TRUE.
@@ -470,7 +472,7 @@ c                            ** Be sure SLFTST sets all print flags off.
 
    20 CONTINUE
 
-      IF( .NOT.PASS1 .AND. LEN( HEADER ).NE.0 )
+      IF( .NOT.PASS1 .AND. LEN( HEADER ).NE.0 .AND. VERBOSE )
      &    WRITE( *,'(//,1X,100(''*''),/,A,/,1X,100(''*''))' )
      &    ' DISORT: '//HEADER
 

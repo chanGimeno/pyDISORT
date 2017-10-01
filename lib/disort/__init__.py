@@ -21,7 +21,7 @@ def run(dTau, w0=1., iphas=2, gg=0.85,
         onlyFl=False, accur=0., plank=False,
         temp=300., wvnmlo=999., wvnmhi=1000.,
         ibcnd=0, fisot=0., btemp=300., ttemp=300.,
-        temis=1., prnt=[False]*5,):
+        temis=1., prnt=[False]*5, verbose=1):
 
     """
 
@@ -201,6 +201,13 @@ def run(dTau, w0=1., iphas=2, gg=0.85,
         phi = np.array([phi])
     if not hasattr(prnt,'__iter__'):
         prnt = prnt * np.ones(5, dtype='bool')
+
+    if verbose > 0:
+        print ' **************************************************************'+\
+            '**************************************'
+        print ' DISORT: Python wrapper to the DISORT radiative transfer solver'
+        print ' **************************************************************'+\
+            '**************************************'
 
     rfldir, rfldn, flup, dfdt, uavg, uu, albmed, trnmed = \
            _disort.run(dTau, w0, maxmom, temp, iphas, gg,
